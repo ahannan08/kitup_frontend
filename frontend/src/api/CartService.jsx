@@ -41,3 +41,5 @@ const CartService = {
         return response
     }
 }
+
+export default CartService

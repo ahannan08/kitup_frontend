@@ -34,3 +34,5 @@ const ClubService = {
     },
     
 }
+
+export default ClubService

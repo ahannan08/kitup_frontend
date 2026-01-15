@@ -1,0 +1,354 @@
+.clubs-container {
+  min-height: 100vh;
+  background-color: #f7fafc;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Error Banner */
+.error-banner {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background-color: #fed7d7;
+  color: #c53030;
+  border-radius: 8px;
+  border-left: 4px solid #c53030;
+  font-weight: 500;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Clubs View */
+.clubs-view {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clubs-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.clubs-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 10px 0;
+}
+
+.clubs-header p {
+  font-size: 16px;
+  color: #718096;
+  margin: 0;
+}
+
+/* Clubs Grid */
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Club Card */
+.club-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.club-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.club-logo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.club-info {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.club-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+}
+
+.club-league {
+  font-size: 14px;
+  color: #667eea;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.club-country {
+  font-size: 13px;
+  color: #718096;
+  margin: 4px 0;
+}
+
+.club-footer {
+  padding: 15px 20px;
+  background-color: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.view-jerseys {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.club-card:hover .view-jerseys {
+  color: #764ba2;
+}
+
+/* Jerseys View */
+.jerseys-view {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jerseys-header {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.back-button {
+  padding: 10px 16px;
+  background-color: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #667eea;
+  color: white;
+}
+
+.jerseys-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 20px 0;
+}
+
+.selected-club-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 20px 0;
+}
+
+/* Jerseys Grid */
+.jerseys-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Jersey Card */
+.jersey-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.jersey-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.jersey-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.jersey-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.jersey-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+}
+
+.jersey-type {
+  font-size: 13px;
+  color: #667eea;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.jersey-season {
+  font-size: 12px;
+  color: #718096;
+  margin: 4px 0;
+}
+
+.jersey-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #667eea;
+  margin: 12px 0 16px 0;
+}
+
+.add-to-cart-btn {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner p {
+  color: #718096;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #718096;
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clubs-grid,
+  .jerseys-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .clubs-header h1,
+  .jerseys-header h1 {
+    font-size: 28px;
+  }
+
+  .club-logo {
+    height: 150px;
+  }
+
+  .jersey-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clubs-container {
+    padding: 12px;
+  }
+
+  .clubs-grid,
+  .jerseys-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clubs-header h1,
+  .jerseys-header h1 {
+    font-size: 24px;
+  }
+
+  .club-logo {
+    height: 180px;
+  }
+
+  .jersey-image {
+    height: 240px;
+  }
+}

@@ -21,3 +21,6 @@ const JerseysService = {
         return response
     }
 }
+
+
+export default JerseysService
