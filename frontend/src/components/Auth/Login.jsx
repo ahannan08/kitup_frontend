@@ -16,16 +16,18 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await AuthService.login(email, password);
-      const data = await response.json();
+      const result = await AuthService.login(email, password);
 
-      if (response.ok) {
-        navigate('/dashboard');
+      if (result.success) {
+        // Login successful
+        navigate('/clubs');
       } else {
-        setError(data.message || 'Login failed');
+        // Handle errora
+        setError(result.data?.message || result.error || 'Login failed');
       }
     } catch (err) {
-      setError('An error occurred. Please try again.');
+      setError('An unexpected error occurred. Please try again.');
+      console.error('Login error:', err);
     } finally {
       setLoading(false);
     }

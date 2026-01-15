@@ -14,6 +14,7 @@ const Clubs = () => {
   // Fetch all clubs on component mount
   useEffect(() => {
     fetchAllClubs();
+    
   }, []);
 
   const fetchAllClubs = async () => {

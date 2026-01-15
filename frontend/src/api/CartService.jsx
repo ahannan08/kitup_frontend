@@ -1,4 +1,4 @@
-import {GET_CART, GET_CARTS, ADD_TO_CART, DELETE_FROM_CART} from '../routes'
+import {GET_CART, GET_CARTS, ADD_CART, DELETE_FROM_CART} from '../routes'
 
 
 const CartService = {
@@ -21,7 +21,7 @@ const CartService = {
         return response
     },
     addToCart: async(jerseyId) => {
-        const response = await fetch(ADD_TO_CART, {
+        const response = await fetch(ADD_CART, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
